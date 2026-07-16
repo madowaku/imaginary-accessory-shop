@@ -126,6 +126,30 @@ CodexにMVP設計書を渡し、次の作業を一つの開発セッションで
 
 設計上の中心は、Cloudflareの部品数を増やすことではなく、**存在しないアクセサリーが自分の身体に現れる瞬間を安定して見せること**です。
 
+## How Codex and GPT-5.6 were used
+
+Codex was used to translate the product concept into a working
+Cloudflare application, including the React UI, Hono Worker API,
+D1 schema, R2 image storage, anonymous sessions, purchase flow,
+moderation, tests, and deployment documentation.
+
+Key decisions made with Codex included:
+
+- narrowing the MVP to three accessory categories
+- replacing Firebase and Cloud Run with Workers, D1, and R2
+- isolating each image generation request so partial failures remain recoverable
+- using signed anonymous sessions instead of a full login system
+- providing a judging fallback when the OpenAI API quota is unavailable
+
+GPT-5.6 is used at runtime with Structured Outputs to generate
+three coherent accessory concepts from the fictional shop world.
+GPT Image 2 generates product imagery and edits the buyer's photo
+to apply the purchased imaginary accessory.
+
+The major implementation decisions and validation evidence are summarized in
+[`docs/BUILD_LOG.md`](./docs/BUILD_LOG.md). The log intentionally excludes full
+prompts, conversation transcripts, secrets, personal photos, and local paths.
+
 ## 現在の制約
 
 - ローカルのデモ画像はフォールバック用のSVGです。OpenAI利用枠を有効にするとGPT Image 2へ切り替わります。
