@@ -13,6 +13,7 @@
     "db:migrate:local": "wrangler d1 migrations apply mirage-market-db --local"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "hono": "^4.10.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

@@ -69,3 +69,10 @@ personal photos, and local machine paths are intentionally excluded.
   documentation.
 - Tagged the checkpoint as `v0.1.0-p0`.
 - Published `main` and the tag to the public GitHub repository.
+
+## 9. Dreamy Boutique redesign
+
+The original dark luxury interface was redesigned into a brighter pearl, rose,
+and lilac boutique. The new direction preserves the imaginary-market concept
+through impossible product imagery, fictional-currency language, impossibility
+tags, and a persistent notice that no physical products are sold.
